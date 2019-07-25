@@ -25,7 +25,8 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log('mongodb database connection established');
-})
+});
+
 // starts listening on a certain port for server
 app.listen(port, () => {
     console.log(`server is running ont port: ${port}`);
